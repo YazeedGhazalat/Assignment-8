@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
                       "log_in Page",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: "AbyssinicaSIL",
+                          fontFamily: "RobotoSlab",
                           fontSize: 30),
                     )),
                 ElevatedButton(
@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
                     child: Text(
                         style: TextStyle(
                             color: Colors.black,
-                            fontFamily: "AbyssinicaSIL",
+                            fontFamily: "RobotoSlab",
                             fontSize: 30),
                         "Sign_up Page")),
               ],
