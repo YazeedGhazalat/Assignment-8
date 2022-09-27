@@ -132,6 +132,8 @@ class _Log_inState extends State<Log_in> {
                 ),
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey.shade300),
                 onPressed: (() {
                   if (nameController.text == "yazeed" &&
                       passwordController.text == "1234") {
@@ -228,7 +230,8 @@ class _Log_inState extends State<Log_in> {
                 }),
                 child: Text(
                   "Log In",
-                  style: TextStyle(fontFamily: "RobotoSlab"),
+                  style:
+                      TextStyle(fontFamily: "RobotoSlab", color: Colors.black),
                 ),
               ),
             ],

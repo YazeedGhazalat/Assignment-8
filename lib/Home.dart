@@ -23,6 +23,8 @@ class _HomeState extends State<Home> {
               children: [
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(250, 50),
+                        maximumSize: const Size(300, 50),
                         backgroundColor: Colors.grey.shade300),
                     onPressed: (() {
                       Navigator.push(context,
@@ -37,8 +39,13 @@ class _HomeState extends State<Home> {
                           fontFamily: "RobotoSlab",
                           fontSize: 30),
                     )),
+                SizedBox(
+                  height: 20,
+                ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(250, 50),
+                        maximumSize: const Size(300, 50),
                         backgroundColor: Colors.grey.shade300),
                     onPressed: (() {
                       Navigator.push(context,
