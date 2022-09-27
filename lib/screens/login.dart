@@ -8,7 +8,7 @@ class Log_in extends StatefulWidget {
 }
 
 class _Log_inState extends State<Log_in> {
-  TextEditingController nameController = TextEditingController();
+  TextEditingController UsernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -40,9 +40,8 @@ class _Log_inState extends State<Log_in> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextField(
-                  controller: nameController,
+                  controller: UsernameController,
                   //obscureText: true,
-
                   cursorColor: Colors.red,
                   decoration: InputDecoration(
                     suffixStyle: TextStyle(
@@ -135,7 +134,7 @@ class _Log_inState extends State<Log_in> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.grey.shade300),
                 onPressed: (() {
-                  if (nameController.text == "yazeed" &&
+                  if (UsernameController.text == "yazeed" &&
                       passwordController.text == "1234") {
                     showDialog(
                         context: context,
