@@ -62,9 +62,10 @@ class _Log_inState extends State<Log_in> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20)),
                     prefixIcon: Icon(Icons.person, color: Colors.black),
-                    hintText: "Please enter ur User_name ",
+                    hintText: "UserName",
                     hintStyle: TextStyle(
-                        color: Colors.black, fontFamily: "RobotoSlab"),
+                        color: Colors.black.withOpacity(0.4),
+                        fontFamily: "RobotoSlab"),
                     label: Container(
                       //                    color: Colors.white,
                       decoration: BoxDecoration(
@@ -76,7 +77,7 @@ class _Log_inState extends State<Log_in> {
                         ),
                       ),
                       child: Text(
-                        "UserName ",
+                        "UserName",
                         style: TextStyle(
                             color: Color.fromARGB(255, 0, 0, 0),
                             fontSize: 25,
@@ -107,9 +108,10 @@ class _Log_inState extends State<Log_in> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20)),
                     prefixIcon: Icon(Icons.key, color: Colors.black),
-                    hintText: "Please enter ur password",
+                    hintText: "Password",
                     hintStyle: TextStyle(
-                        color: Colors.black, fontFamily: "RobotoSlab"),
+                        color: Colors.black.withOpacity(0.4),
+                        fontFamily: "RobotoSlab"),
                     label: Container(
                       //                    color: Colors.white,
                       decoration: BoxDecoration(
@@ -154,7 +156,7 @@ class _Log_inState extends State<Log_in> {
                             alignment: Alignment.center,
                             content: Text(
                               textDirection: TextDirection.ltr,
-                              "please wait!",
+                              "Please wait!",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontSize: 25, fontFamily: "RobotoSlab"),
@@ -197,7 +199,7 @@ class _Log_inState extends State<Log_in> {
                             size: 40,
                           ),
                           content: Text(
-                            "Wrong User name or password ",
+                            "Wrong UserName or Password ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: "RobotoSlab", fontSize: 25),
