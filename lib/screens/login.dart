@@ -167,7 +167,8 @@ class _Log_inState extends State<Log_in> {
                               ElevatedButton.icon(
                                   icon: Icon(Ionicons.enter),
                                   onPressed: (() {
-                                    Navigator.push(context, MaterialPageRoute(
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(
                                       builder: ((context) {
                                         return myProfile();
                                       }),

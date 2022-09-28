@@ -173,7 +173,7 @@ class myProfile extends StatelessWidget {
                         maximumSize: const Size(250, 50),
                         backgroundColor: Color.fromARGB(255, 184, 184, 184)),
                     onPressed: (() {
-                      Navigator.pushReplacement(context,
+                      Navigator.pop(context,
                           MaterialPageRoute(builder: ((context) {
                         return Log_in();
                       })));
