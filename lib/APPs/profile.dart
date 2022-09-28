@@ -153,7 +153,7 @@ class myProfile extends StatelessWidget {
                   myPlatformSubTitle: "https://github.com/YazeedGhazalat",
                 ),
                 URLClass(
-                  myFunction: GitHub,
+                  myFunction: Email,
                   myPlatformIcon: Ionicons.mail,
                   myPlatformTitle: "Email",
                   myPlatformSubTitle: "YazeedGhazalat@gmail.com",

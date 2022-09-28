@@ -24,8 +24,8 @@ Future<void> GitHub() async {
 }
 
 Future<void> Email() async {
-  if (!await launchUrl(GitHub_url)) {
-    throw 'Could not launch $GitHub_url';
+  if (!await launchUrl(Email_url)) {
+    throw 'Could not launch $Email_url';
   }
 }
 
