@@ -48,6 +48,13 @@ class myProfile extends StatelessWidget {
                 Text(
                   'Yazeed Ghazalat',
                   style: TextStyle(
+                    shadows: <Shadow>[
+                      Shadow(
+                        offset: Offset(3.0, 3.0),
+                        blurRadius: 3.0,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ],
                     fontSize: 35,
                     fontFamily: "RobotoSlab",
                     fontWeight: FontWeight.bold,
@@ -57,6 +64,13 @@ class myProfile extends StatelessWidget {
                 Text(
                   'Flutter Developer',
                   style: TextStyle(
+                    shadows: <Shadow>[
+                      Shadow(
+                        offset: Offset(3.0, 3.0),
+                        blurRadius: 3.0,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ],
                     fontFamily: "RobotoSlab",
                     color: Colors.white,
                     fontSize: 25,
