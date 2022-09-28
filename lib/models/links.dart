@@ -1,0 +1,91 @@
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+final Uri Facebook_url = Uri.parse('https://www.facebook.com/yazeed.ghazalat');
+final Uri Instagram_url =
+    Uri.parse('https://www.instagram.com/yazeed_ghazalat/');
+final Uri LinkedIN_url =
+    Uri.parse('https://www.linkedin.com/in/yazeed-ghazalat-205111161');
+final Uri ourLocation_url = Uri.parse('https://goo.gl/maps/CnFADFJpFDvj4Azt6');
+final Uri GitHub_url = Uri.parse('https://github.com/YazeedGhazalat');
+final Uri Email_url =
+    Uri.parse('https://mail.google.com/mail/u/1/?tab=km#inbox?compose=new');
+
+Future<void> Facebook() async {
+  if (!await launchUrl(Facebook_url)) {
+    throw 'Could not launch $Facebook_url';
+  }
+}
+
+Future<void> GitHub() async {
+  if (!await launchUrl(GitHub_url)) {
+    throw 'Could not launch $GitHub_url';
+  }
+}
+
+Future<void> Email() async {
+  if (!await launchUrl(GitHub_url)) {
+    throw 'Could not launch $GitHub_url';
+  }
+}
+
+Future<void> Instagram() async {
+  if (!await launchUrl(Instagram_url)) {
+    throw 'Could not launch $Instagram_url';
+  }
+}
+
+Future<void> LinkedIN() async {
+  if (!await launchUrl(LinkedIN_url)) {
+    throw 'Could not launch $LinkedIN_url';
+  }
+}
+
+Future<void> ourLocation() async {
+  if (!await launchUrl(ourLocation_url)) {
+    throw 'Could not launch $ourLocation_url';
+  }
+}
+
+class URLClass extends StatelessWidget {
+  URLClass(
+      {required this.myFunction,
+      required this.myPlatformIcon,
+      required this.myPlatformSubTitle,
+      required this.myPlatformTitle});
+  String? myPlatformTitle;
+  String? myPlatformSubTitle;
+  IconData? myPlatformIcon;
+  Function()? myFunction;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: myFunction,
+      child: Container(
+        child: ListTile(
+          isThreeLine: true,
+          title: Text(
+            "$myPlatformTitle",
+            style: TextStyle(
+              fontFamily: "RobotoSlab",
+              color: Colors.deepOrange,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          subtitle: Text(
+            "$myPlatformSubTitle",
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "RobotoSlab",
+            ),
+          ),
+          leading: Icon(
+            myPlatformIcon,
+            size: 40,
+          ),
+        ),
+      ),
+    );
+  }
+}

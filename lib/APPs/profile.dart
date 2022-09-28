@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:lec_27_9/models/links.dart';
 import 'package:lec_27_9/screens/login.dart';
 
 class myProfile extends StatelessWidget {
@@ -138,68 +139,26 @@ class myProfile extends StatelessWidget {
           Container(
             child: Column(
               children: <Widget>[
-                ListTile(
-                  isThreeLine: true,
-                  leading: Icon(Ionicons.mail),
-                  title: Text(
-                    'Email',
-                    style: TextStyle(
-                      fontFamily: "RobotoSlab",
-                      color: Colors.deepOrange,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  subtitle: Text(
-                    'YazeedGhazalat@gmail.com',
-                    style: TextStyle(
-                      fontFamily: "RobotoSlab",
-                      fontSize: 18,
-                    ),
-                  ),
+                URLClass(
+                  myFunction: Facebook,
+                  myPlatformIcon: Icons.facebook,
+                  myPlatformTitle: "Facebook",
+                  myPlatformSubTitle:
+                      "https://www.facebook.com/yazeed.ghazalat/",
+                ),
+                URLClass(
+                  myFunction: GitHub,
+                  myPlatformIcon: Ionicons.logo_github,
+                  myPlatformTitle: "GitHub",
+                  myPlatformSubTitle: "https://github.com/YazeedGhazalat",
+                ),
+                URLClass(
+                  myFunction: GitHub,
+                  myPlatformIcon: Ionicons.mail,
+                  myPlatformTitle: "Email",
+                  myPlatformSubTitle: "YazeedGhazalat@gmail.com",
                 ),
                 Divider(),
-                ListTile(
-                  isThreeLine: true,
-                  leading: Icon(Ionicons.logo_github),
-                  title: Text(
-                    'GitHub',
-                    style: TextStyle(
-                      fontFamily: "RobotoSlab",
-                      color: Colors.deepOrange,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  subtitle: Text(
-                    'https://github.com/YazeedGhazalat',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: "RobotoSlab",
-                    ),
-                  ),
-                ),
-                Divider(),
-                ListTile(
-                  isThreeLine: true,
-                  leading: Icon(Ionicons.logo_linkedin),
-                  title: Text(
-                    'Linkedin',
-                    style: TextStyle(
-                      fontFamily: "RobotoSlab",
-                      color: Colors.deepOrange,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  subtitle: Text(
-                    'www.linkedin.com/in/leonardo-palmeiro-834a1755',
-                    style: TextStyle(
-                      fontFamily: "RobotoSlab",
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
                 ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                         elevation: 20,
