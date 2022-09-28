@@ -24,7 +24,9 @@ class _Log_inState extends State<Log_in> {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage("images/3386851.jpg"),
+            image: AssetImage(
+              "images/3386851.jpg",
+            ),
           ),
         ),
         child: SingleChildScrollView(
@@ -34,8 +36,9 @@ class _Log_inState extends State<Log_in> {
                 height: 20,
               ),
               CircleAvatar(
+                backgroundColor: Colors.white,
                 radius: 80,
-                foregroundImage: AssetImage("images/3.jpg"),
+                foregroundImage: AssetImage("images/5.png"),
               ),
               SizedBox(
                 height: 20,
@@ -188,10 +191,17 @@ class _Log_inState extends State<Log_in> {
                       context: context,
                       builder: ((context) {
                         return AlertDialog(
+                          icon: Icon(
+                            Ionicons.warning,
+                            size: 40,
+                          ),
                           content: Text(
                             "Wrong User name or password ",
-                            style: TextStyle(fontFamily: "RobotoSlab"),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: "RobotoSlab", fontSize: 25),
                           ),
+                          actionsAlignment: MainAxisAlignment.center,
                           actions: [
                             ElevatedButton(
                                 onPressed: (() {

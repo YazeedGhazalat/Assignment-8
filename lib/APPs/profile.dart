@@ -188,11 +188,13 @@ class myProfile extends StatelessWidget {
                 ),
                 ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
+                        elevation: 20,
+                        shadowColor: Colors.black,
                         minimumSize: const Size(200, 40),
                         maximumSize: const Size(250, 50),
-                        backgroundColor: Colors.grey.shade300),
+                        backgroundColor: Color.fromARGB(255, 184, 184, 184)),
                     onPressed: (() {
-                      Navigator.pop(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: ((context) {
                         return Log_in();
                       })));
@@ -205,9 +207,14 @@ class myProfile extends StatelessWidget {
                       "Log out",
                       style: TextStyle(
                         fontFamily: "RobotoSlab",
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
-                    ))
+                    )),
+                SizedBox(
+                  height: 20,
+                )
               ],
             ),
           )
