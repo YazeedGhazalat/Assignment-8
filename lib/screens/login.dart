@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
+import 'package:lec_27_9/APPs/profile.dart';
 
 class Log_in extends StatefulWidget {
   const Log_in({super.key});
@@ -80,7 +82,7 @@ class _Log_inState extends State<Log_in> {
                     ),
                   ),
                   maxLines: 1,
-                  maxLength: 20,
+                  maxLength: 10,
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -125,7 +127,7 @@ class _Log_inState extends State<Log_in> {
                     ),
                   ),
                   maxLines: 1,
-                  maxLength: 20,
+                  maxLength: 10,
                   textAlign: TextAlign.center,
                   onSubmitted: (value) {
                     print(value);
@@ -134,72 +136,50 @@ class _Log_inState extends State<Log_in> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                    elevation: 20,
+                    minimumSize: const Size(200, 55),
+                    maximumSize: const Size(300, 60),
                     backgroundColor: Colors.grey.shade300),
                 onPressed: (() {
                   if (userNameController.text == "yazeed" &&
                       passwordController.text == "1234") {
                     showDialog(
                         context: context,
+                        useSafeArea: true,
                         builder: ((context) {
                           return AlertDialog(
-                            content: Text("You are welcome please wait!"),
+                            alignment: Alignment.center,
+                            content: Text(
+                              textDirection: TextDirection.ltr,
+                              "please wait!",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 25, fontFamily: "RobotoSlab"),
+                            ),
+                            icon: Icon(
+                              Ionicons.time,
+                            ),
+                            actionsAlignment: MainAxisAlignment.center,
                             actions: [
-                              ElevatedButton(
+                              ElevatedButton.icon(
+                                  icon: Icon(Ionicons.enter),
                                   onPressed: (() {
                                     Navigator.push(context, MaterialPageRoute(
                                       builder: ((context) {
-                                        return AlertDialog(
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10.0))),
-                                          content: SingleChildScrollView(
-                                            child: Container(
-                                              width: 250,
-                                              height: 300,
-                                              child: Column(
-                                                children: [
-                                                  Container(
-                                                      child: Text(
-                                                    "You are a good person",
-                                                    style: TextStyle(
-                                                        fontFamily:
-                                                            "RobotoSlab"),
-                                                  )),
-                                                  SizedBox(
-                                                    height: 15,
-                                                  ),
-                                                  Image.asset("images/4.jpg")
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          alignment: Alignment.center,
-                                          actionsAlignment:
-                                              MainAxisAlignment.center,
-                                          actions: [
-                                            ElevatedButton(
-                                                onPressed: (() {
-                                                  Navigator.pop(context,
-                                                      MaterialPageRoute(
-                                                          builder: ((context) {
-                                                    return Log_in();
-                                                  })));
-                                                }),
-                                                child: Text("Try Again"))
-                                          ],
-                                        );
+                                        return myProfile();
                                       }),
                                     ));
                                   }),
-                                  child: Text("will wait")),
-                              ElevatedButton(
+                                  label: Text("Enter")),
+                              ElevatedButton.icon(
+                                  icon: Icon(Ionicons.exit),
                                   onPressed: (() {
                                     Navigator.pop(context,
                                         MaterialPageRoute(builder: ((context) {
                                       return Log_in();
                                     })));
                                   }),
-                                  child: Text("won't"))
+                                  label: Text("Exit"))
                             ],
                           );
                         }));
@@ -231,8 +211,10 @@ class _Log_inState extends State<Log_in> {
                 }),
                 child: Text(
                   "Log In",
-                  style:
-                      TextStyle(fontFamily: "RobotoSlab", color: Colors.black),
+                  style: TextStyle(
+                      fontFamily: "RobotoSlab",
+                      color: Colors.black,
+                      fontSize: 30),
                 ),
               ),
             ],
