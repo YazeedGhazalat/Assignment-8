@@ -8,8 +8,7 @@ final Uri LinkedIN_url =
     Uri.parse('https://www.linkedin.com/in/yazeed-ghazalat-205111161');
 final Uri ourLocation_url = Uri.parse('https://goo.gl/maps/CnFADFJpFDvj4Azt6');
 final Uri GitHub_url = Uri.parse('https://github.com/YazeedGhazalat');
-final Uri Email_url =
-    Uri.parse('https://mail.google.com/mail/u/1/?tab=km#inbox?compose=new');
+final Uri Email_url = Uri.parse('mailto:yazeedghazalat@gmail.com');
 
 Future<void> Facebook() async {
   if (!await launchUrl(Facebook_url)) {
@@ -47,6 +46,7 @@ Future<void> ourLocation() async {
   }
 }
 
+// ignore: must_be_immutable
 class URLClass extends StatelessWidget {
   URLClass(
       {required this.myFunction,
