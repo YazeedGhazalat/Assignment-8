@@ -158,6 +158,12 @@ class myProfile extends StatelessWidget {
                   myPlatformTitle: "Email",
                   myPlatformSubTitle: "YazeedGhazalat@gmail.com",
                 ),
+                URLClass(
+                  myFunction: Phone,
+                  myPlatformIcon: Ionicons.call,
+                  myPlatformTitle: "Phone",
+                  myPlatformSubTitle: "+962780785310",
+                ),
                 Divider(),
                 ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(

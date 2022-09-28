@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 final Uri Facebook_url = Uri.parse('https://www.facebook.com/yazeed.ghazalat');
 final Uri Instagram_url =
@@ -9,7 +10,7 @@ final Uri LinkedIN_url =
 final Uri ourLocation_url = Uri.parse('https://goo.gl/maps/CnFADFJpFDvj4Azt6');
 final Uri GitHub_url = Uri.parse('https://github.com/YazeedGhazalat');
 final Uri Email_url = Uri.parse('mailto:yazeedghazalat@gmail.com');
-
+final Uri Phone_url = Uri.parse('tel:+962780785310');
 Future<void> Facebook() async {
   if (!await launchUrl(Facebook_url)) {
     throw 'Could not launch $Facebook_url';
@@ -25,6 +26,12 @@ Future<void> GitHub() async {
 Future<void> Email() async {
   if (!await launchUrl(Email_url)) {
     throw 'Could not launch $Email_url';
+  }
+}
+
+Future<void> Phone() async {
+  if (!await launchUrl(Phone_url)) {
+    throw 'Could not launch $Phone_url';
   }
 }
 
